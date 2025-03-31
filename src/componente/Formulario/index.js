@@ -5,17 +5,8 @@ import Botao from '../Botao';
 import { useState } from 'react';
 
 
-const Formulario = ({ times, aoColaboradorCadastrado }) => {
 
-    // const times = [
-    // 'Programação',
-    // 'Front-End',
-    // 'Data Science',
-    // 'Devops',
-    // 'UX e Design',
-    // 'Mobile',
-    // ' Inovação e Gestão'
-    // ]
+const Formulario = ({ times, aoColaboradorCadastrado }) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -30,8 +21,12 @@ const Formulario = ({ times, aoColaboradorCadastrado }) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
-    
+
 
     return (
         <section className='formulario'>
@@ -68,6 +63,8 @@ const Formulario = ({ times, aoColaboradorCadastrado }) => {
                 <Botao>
                     criar card
                 </Botao>
+
+               
             </form>
         </section>
     )

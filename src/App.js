@@ -1,6 +1,7 @@
 
 import Banner from './componente/Banner/Banner.js';
 import Formulario from './componente/Formulario/index.js';
+
 import Time from './componente/Time/index.js';
 
 import { useState } from 'react';
@@ -60,6 +61,8 @@ function App() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}/>
       ))}
+
+      
     </div>
   );
 }
